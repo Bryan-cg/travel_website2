@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1= title
+    if locals.flashes
+    - const categories = Object.keys(locals.flashes)
+    each category in categories
+      each message in flashes[category]
+        .flash(class=`flash--${category}`)
+          p.flash__text!= message
+          button.flash__remove(onClick="this.parentElement.remove()") &times;
+    
+    p Subscribe to our mailing list and get up to date information!
+
+    form(action="/mail" method="POST")
+        label.label Email 
+            input.input(type="text" name="email" placeholder="Enter email")
+            input.button(type="submit" value="Submit")

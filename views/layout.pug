@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href='/') Travel
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+
+    .collapse.navbar-collapse(id='navbarSupportedContent')
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='/') Home
+        li.nav-item
+          a.nav-link(href='/countries') Countries
+        li.nav-item
+          a.nav-link(href='/cities') Cities
+        li.nav-item
+          a.nav-link(href='/mail') Subscribe
+        li.nav-item
+          a.nav-link(href='/about') About
+
+  body
+    block content
