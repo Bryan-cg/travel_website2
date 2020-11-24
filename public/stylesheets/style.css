@@ -1,8 +1,16 @@
 body {
+  background: #f7f7f7;
+  font-size: 14px;
+  line-height: 85%;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+.flash {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
 }
