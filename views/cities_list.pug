@@ -2,3 +2,11 @@ extends layout
 
 block content
   h1= title
+  ul
+    - cities_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+    each city in cities_list
+      li 
+        a(href=city.url) #{city.name} (#{city.country})
+
+    else
+      li There are no cities.

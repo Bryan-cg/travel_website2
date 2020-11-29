@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 #{title}: #{country.title}
+
+    p #[strong Capital:] 
+    a(href=country.capital.url) #{country.capital}
+    p #[strong Description:] #{country.description}
+    p #[strong reviews:] #{country.reviews}
+    p #[strong Recommendad days to stay:] #{country.days}
+    p #[strong Prijs:] #{country.price}
+    

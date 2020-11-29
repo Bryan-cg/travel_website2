@@ -16,9 +16,9 @@ var CountrySchema= new Schema(
 
 //Virtual voor gehele locatie
 CountrySchema
-.virtual('locatie')
+.virtual('url')
 .get(function(){
-    return this.name + ': ' + this.capital + ' (' + this.continent + ')';
+    return '/countries/' + this._id;
 });
 
 

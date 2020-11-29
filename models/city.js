@@ -16,9 +16,9 @@ var CitySchema = new Schema(
 
 //Virtual voor gehele locatie
 CitySchema
-.virtual('locatie')
+.virtual('url')
 .get(function(){
-    return this.name +  ' (' + this.capital  + ', ' +  this.continent + ')';
+    return '/city/' + this._id;
 });
 
 

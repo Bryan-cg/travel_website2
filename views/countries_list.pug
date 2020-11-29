@@ -7,8 +7,7 @@ block content
 		- countries_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
 		each country in countries_list
 			li 
-				a(href=country.url) #{country.name} 
-				|  	Capital: #{country.capital}
+				a(href=country.url) #{country.name} (#{country.capital})
 
 		else
 			li There are no countries.
