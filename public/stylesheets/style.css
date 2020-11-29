@@ -19,7 +19,9 @@ a {
 .flash {
   color: #468847;
   background-color: #dff0d8;
+  border: 2px solid black;
   border-color: #d6e9c6;
+  margin: 20px;
 }
 .navbar {
   position: fixed;
