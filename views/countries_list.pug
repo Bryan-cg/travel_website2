@@ -2,3 +2,13 @@ extends layout
 
 block content
 	h1=title
+
+	ul
+		- countries_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+		each country in countries_list
+			li 
+				a(href=country.url) #{country.name} 
+				|  	Capital: #{country.capital}
+
+		else
+			li There are no countries.

@@ -1,5 +1,5 @@
 body {
-  background: #f7f7f7;
+  background: #F5F5DC;
   font-size: 14px;
   line-height: 85%;
   padding: 50px;
@@ -21,7 +21,7 @@ a {
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
-ul {
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -30,6 +30,14 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #808080;
 }
 
 li {
