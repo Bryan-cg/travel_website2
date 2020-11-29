@@ -17,6 +17,8 @@ router.get('/cities', cityController.city_list);
 router.get('/mail', mailController.main);
 router.get('/about', aboutController.main);
 router.get('/countries/:id', countryController.country_detail);
+router.get('/cities/:id', cityController.city_detail);
+
 
 router.post('/mail', catchErrors(subscriberController.postPeople));
 

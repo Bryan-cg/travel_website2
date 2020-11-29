@@ -18,7 +18,7 @@ var CitySchema = new Schema(
 CitySchema
 .virtual('url')
 .get(function(){
-    return '/city/' + this._id;
+    return '/cities/' + this._id;
 });
 
 
