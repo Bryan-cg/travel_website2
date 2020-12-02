@@ -1,18 +1,21 @@
 extends layout
 
 block content
-    h1= title
-    if locals.flashes
-    - const categories = Object.keys(locals.flashes)
-    each category in categories
-      each message in flashes[category]
-        .flash(class=`flash--${category}`)
-          p.flash__text!= message
-          button.flash__remove(onClick="this.parentElement.remove()") &times;
-    
-    p Subscribe to our mailing list and get up to date information!
+  h1= title
+  if locals.flashes
+  - const categories = Object.keys(locals.flashes)
+  each category in categories
+    each message in flashes[category]
+      .flash(class=`flash--${category}`)
+        p.flash__text!= message
+        button.flash__remove(onClick="this.parentElement.remove()") &times;
+  
+  p Subscribe to our mailing list and get up to date information!
 
-    form(action="/mail" method="POST")
-        label.label Email 
-            input.input(type="text" name="email" placeholder="Enter email")
-            input.button(type="submit" value="Submit")
+  form(action="/mail" method="POST")
+      label.label Email 
+          input.input(type="text" name="email" placeholder="Enter email")
+          input.button(type="submit" value="Submit")
+  p(class ="info") When you subscribe to our emailing service, you will be the first one to hear all kind of exciting new things we have ready for you.
+  |This can range from temporary offers, the announcement of new places you can visit
+  |or even contest in which you can win a free vacation.

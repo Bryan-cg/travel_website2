@@ -9,7 +9,7 @@ const aboutController = require('../controllers/AboutController')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Discover the world' });
+  res.render('index', { title: 'Travel the world' });
 });
 
 router.get('/countries', countryController.country_list);

@@ -2,23 +2,36 @@ extends layout
 
 block content
 
-  h1= title
   meta(name="viewport" content="width=device-width, initial-scale=1")
-  div.slideshow
-    div.mySlides
-      div.numbertext 1/3
-        img(src="images/img_snow_wide.jpg" style="width:100%")
-    div.mySlides.fade
-      div.numbertext 2/3
-        img(src="images/img_nature_wide.jpg" style="width:100%")
-    div.mySlides.fade
-      div.numbertext 3/3
-        img(src="images/img_mountains_wide.jpg" style="width:100%")
+  div.changeBack
+    div.header 
+        br
+        h1= title
+        p Start your journey now
+    div.slideshow
+      div.mySlides
+        img(src="images/red_nature.jpg" style="width:100%")
+      div.mySlides.fade
+        img(src="images/camping.jpg" style="width:100%")
+      div.mySlides.fade 
+        img(src="images/rainbow.jpg" style="width:100%")
 
-    div.text.align.center
-      span(class="dot")
-      span(class="dot")
-      span(class="dot")
+      div.text.align.center
+        span(class="dot")
+        span(class="dot")
+        span(class="dot")
+
+    div.homePag
+    object(width="50%" height="800" data="https://www.youtube.com/embed/FCPdIvXo2rU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    p(class="main") #[strong Enjoy more, worry less]
+    p(class="main") The best place for all of you who like to travel but don't want to 
+      |organise everything by themself.
+      br
+      |We offer a wide range of places for you to visit and we give you the choice to visit an entire country
+      |at once or truly discover one city.
+      br
+      |So if you're interested in any of the things mentioned above, I suggest you keep 
+      |looking through our site. 
 
   script.
     var slideIndex = 0;
@@ -38,6 +51,7 @@ block content
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 3000); // Change image every 2 seconds
+      setTimeout(showSlides, 4000); 
     }
+  
   
