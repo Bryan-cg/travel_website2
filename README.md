@@ -4,7 +4,11 @@ Site die subscribers opslaat in database en gegevens over landen en steden uit d
 
 https://travelwebsite-applicatie.ey.r.appspot.com/
 ## How To Run
-  git clone https://github.com/Bryan-cg/travel_website2
+'''
+git clone https://github.com/Bryan-cg/travel_website2
+'''
 Go to repository in terminal
+'''
   npm install
   npm run serverstart
+'''
