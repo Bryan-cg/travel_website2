@@ -8,8 +8,6 @@ const flash = require('connect-flash');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 
-
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
