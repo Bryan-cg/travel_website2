@@ -9,6 +9,6 @@ git clone https://github.com/Bryan-cg/travel_website2
 ```
 Go to repository in terminal
 ```
-  npm install
-  npm run serverstart
+npm install
+npm run serverstart
 ```
