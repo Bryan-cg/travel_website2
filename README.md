@@ -1,8 +1,10 @@
-# travel_website
-## Project internetapplicaties
-Site die subscribers opslaat in database en gegevens over landen en steden uit de database ophaalt en toont aan de gebruiken. Gebruiker kan zo meer info te weten komen om z'n reis te plannen
+# Travel Website
+## Project internetapplications
+Website that gives some travel information to visiters. Visiters can subscribe to a 'mailing list'. These emails are saved inside a Monogo Database together with information about countries and cities that can be viewed on the website.
 
+## Website URL
 https://travelwebsite-applicatie.ey.r.appspot.com/
+
 ## How To Run
 ```
 git clone https://github.com/Bryan-cg/travel_website2
