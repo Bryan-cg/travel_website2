@@ -143,7 +143,7 @@ object {
     top: -700px;
     white-space: pre-line;
     word-break: break-all;
-    max-width: 100%;
+    width: 45%;
   }
   .youtube {
     width: 50%; 
@@ -194,9 +194,9 @@ object {
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #9ed8ff; 
   border: none;
-  color: white;
+  color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;

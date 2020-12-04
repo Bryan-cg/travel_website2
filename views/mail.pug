@@ -1,7 +1,8 @@
 extends layout
 
 block content
-  p 
+  p
+  |
   h1(class="blinking")= title
   if locals.flashes
   - const categories = Object.keys(locals.flashes)
@@ -14,7 +15,7 @@ block content
   p Subscribe to our mailing list and get up to date information!
 
   form(action="/mail" method="POST")
-      label.label Email 
+      label.label 
           input.input(type="text" name="email" placeholder="Enter email")
           input.button(type="submit" value="Submit")
   p(class ="info") When you subscribe to our emailing service, you will be the first one to hear all kind of exciting new things we have ready for you.
