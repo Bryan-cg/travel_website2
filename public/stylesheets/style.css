@@ -270,3 +270,12 @@ input[type=text] {
 input[type=text]:focus {
   background-color: lightblue;
 }
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(255, 166, 137);
+  color: white;
+  bottom: 0;
+}
