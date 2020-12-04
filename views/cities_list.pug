@@ -1,22 +1,37 @@
 extends layout
 
 block content
-  h1= title
-  ul
-    - cities_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
-    each city in cities_list
-      li 
-        a(href=city.url) #{city.name} (#{city.country})
+  div(id="citieslist")
+    h1= title
+    ul
+      - cities_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+      each city in cities_list
+        li 
+          a(href=city.url) #{city.name} (#{city.country})
 
-    else
-      li There are no cities.
-  p Fully unravelling the the hidden gems in a city. Is there anything better. 
-    |With these three amazing cities to discover your vacation won't be boring for even one moment.
-    br
-    |Buenos Aires, the cultural heart of Argentinia.
-    br
-    |London, the best place to see amazing historical buildings but also visit modern places
-    br
-    |Paris, it's called the city of love and light for a reason.
+      else
+        li There are no cities.
+    button(class="button button2" style="vertical-align:middle" type="button" onclick="loadDoc()")
+      span Press to show cities on map
+    p Fully unravelling the the hidden gems in a city. Is there anything better. 
+      |With these three amazing cities to discover your vacation won't be boring for even one moment.
+      br
+      |Buenos Aires, the cultural heart of Argentinia.
+      br
+      |London, the best place to see amazing historical buildings but also visit modern places
+      br
+      |Paris, it's called the city of love and light for a reason.
 
-  img(src="images/newYork.jpg" style="width:50%")
+    img(src="images/newYork.jpg" style="width:50%")
+  script.
+    function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("citieslist").innerHTML =
+      this.responseText;
+      }
+    };
+    xhttp.open("GET", "ajax_citiesmap.txt", true);
+    xhttp.send();
+    }

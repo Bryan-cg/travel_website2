@@ -1,0 +1,6 @@
+<h1>Cities</h1>
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=16.363473153908625, -31.05323689654511&zoom=3&size=1000x800&maptype=roadmap
+&markers=color:blue%7Clabel:A%7C-34.62199010338347, -58.40364192246709&markers=color:red%7Clabel:B%7C51.48924082217718, -0.12151728653318965
+&markers=color:green%7Clabel:C%7C48.869678696494645, 2.3391619082581836
+&key=AIzaSyA4j4flm3LDxAp24_b6u3drhEDImnqB1iA"/>
+<p>In the map above you can see the three cities you can visit!</p>
