@@ -1,0 +1,7 @@
+<h1>Destination</h1>
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=29.882182926763257, -38.68196504086237&zoom=3&size=1000x800&maptype=roadmap
+&markers=color:blue%7Clabel:A%7C43.41319634740206, 12.091089692914066&markers=color:red%7Clabel:B%7C60.89203677363523, 8.251978732007453
+&markers=color:green%7Clabel:C%7C-3.289861950394161, -50.129373283247226
+&key=AIzaSyA4j4flm3LDxAp24_b6u3drhEDImnqB1iA"/>
+<p>AJAX is a technique for accessing web servers from a web page.</p>
+<p>AJAX stands for Asynchronous JavaScript And XML.</p>

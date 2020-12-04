@@ -1,27 +1,42 @@
 extends layout
 
 block content
-	h1=title
+	div(id="demo")
+		h1=title
+		
+		ul
+			- countries_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+			each country in countries_list
+				li 
+					a(href=country.url) #{country.name} (#{country.capital})
 
-	ul
-		- countries_list.sort(function(a, b) {let textA = a.name.toUpperCase(); let textB = b.name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
-		each country in countries_list
-			li 
-				a(href=country.url) #{country.name} (#{country.capital})
+			else
+				li There are no countries.
 
-		else
-			li There are no countries.
-
-	p(class="countries") So, you want to discover an entire country and really visit everything there is to offer.
-		br
-		|Above you can chose some amazing destinations.
-		br 
-		|Brasil, we've all HEARED amazing stories about this place, but why not LIVE them yourself.
-		br
-		|Italy, a country that offers something to everyone, from the Colosseum to the romantic Venice.
-		br
-		|Norway, a place where you can truly come to rest and enjoy the spectecular 
-		br
-		|northern Light and many more for 
-		|you to discover.
-	img(class="countrypic" src="images/venice.jpg" style="width:50%")
+		button(type="button" onclick="loadDoc()") Show countries
+		p(class="countries") So, you want to discover an entire country and really visit everything there is to offer.
+			br
+			|Above you can chose some amazing destinations.
+			br 
+			|Brasil, we've all HEARED amazing stories about this place, but why not LIVE them yourself.
+			br
+			|Italy, a country that offers something to everyone, from the Colosseum to the romantic Venice.
+			br
+			|Norway, a place where you can truly come to rest and enjoy the spectecular 
+			br
+			|northern Light and many more for 
+			|you to discover.
+		img(class="countrypic" src="images/venice.jpg" style="width:50%")
+	
+	script.
+		function loadDoc() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("demo").innerHTML =
+			this.responseText;
+			}
+		};
+		xhttp.open("GET", "ajax_info.txt", true);
+		xhttp.send();
+		}
