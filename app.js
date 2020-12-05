@@ -23,6 +23,7 @@ app.use(session({
   cookie: {secure: false},
   store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
+
 app.use(flash());
 app.use((req, res, next) => {
   res.locals.flashes = req.flash();
